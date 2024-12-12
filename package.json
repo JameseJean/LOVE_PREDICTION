@@ -2,7 +2,8 @@
   "dependencies": {
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "vercel": "^33.0.1"
   },
   "scripts": {
     "check-encoding": "node scripts/check-encoding.js",
@@ -10,6 +11,9 @@
   },
   "devDependencies": {
     "iconv-lite": "^0.6.3",
-    "vercel": "^latest"
+    "vercel": "^33.0.1"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
