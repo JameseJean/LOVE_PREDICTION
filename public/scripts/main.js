@@ -65,7 +65,7 @@ function getResultDescription(score) {
 
 // API配置
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://love-prediction-nxo93si9y-jamesjeans-projects.vercel.app'
+  ? '/api'
   : '';
 
 // 提交表单
