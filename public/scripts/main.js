@@ -71,10 +71,10 @@ async function submitForm(formData) {
   try {
     showLoading();
     
-    const response = await fetch(`${API_BASE_URL}/predict`, {
+    const response = await fetch('/api/predict', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(formData)
     });
