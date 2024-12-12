@@ -1,3 +1,6 @@
+// 在文件最开始定义 API 配置
+const API_BASE_URL = '/api';
+
 // 全局状态管理
 const state = {
   isLoading: false,
@@ -63,24 +66,20 @@ function getResultDescription(score) {
   }
 }
 
-// API配置
-const API_BASE_URL = '/api';
-
-// 提交表单
-async function submitForm(formData) {
+// 提交表单函数
+async function submitForm(data) {
   try {
     showLoading();
-    
-    const response = await fetch('/api/predict', {
+    const response = await fetch(`${API_BASE_URL}/predict`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(data)
     });
     
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      throw new Error('提交失败');
     }
     
     const result = await response.json();

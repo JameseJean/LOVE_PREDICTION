@@ -1,3 +1,8 @@
+// 确保submitForm函数可用
+if (typeof submitForm !== 'function') {
+  console.error('submitForm 函数未定义，请确保main.js已正确加载');
+}
+
 // 表单验证配置
 const validationRules = {
   name1: {
