@@ -1,0 +1,38 @@
+/* 重置所有元素的默认样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 重置基础标签 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--secondary-color);
+}
+
+/* 重置表单元素 */
+input, button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* 重置图片 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 重置链接样式 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 重置列表样式 */
+ul, ol {
+  list-style: none;
+} 

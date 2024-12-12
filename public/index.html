@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/webp" href="assets/images/logo.webp">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>AI 恋爱/婚姻契合度预测</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo.webp" alt="网站logo">
+        </div>
+        <h1>AI 恋爱/婚姻契合度预测</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <form id="prediction-form">
+                <div class="person-info">
+                    <h3>你的信息</h3>
+                    <label for="name1">你的姓名:</label>
+                    <input type="text" id="name1" name="name1" required>
+                    <span class="error-message" id="name1-error"></span>
+
+                    <label for="age1">你的年龄:</label>
+                    <input type="number" id="age1" name="age1" required>
+                    <span class="error-message" id="age1-error"></span>
+                </div>
+
+                <div class="person-info">
+                    <h3>对方信息</h3>
+                    <label for="name2">对方姓名:</label>
+                    <input type="text" id="name2" name="name2" required>
+                    <span class="error-message" id="name2-error"></span>
+
+                    <label for="age2">对方年龄:</label>
+                    <input type="number" id="age2" name="age2" required>
+                    <span class="error-message" id="age2-error"></span>
+                </div>
+
+                <button type="submit">开始预测</button>
+            </form>
+        </section>
+        <section class="result-section" id="result-section">
+            <!-- 预测结果将在这里展示 -->
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 AI 恋爱/婚姻契合度预测网站. 保留所有权利.</p>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/validation.js"></script>
+</body>
+</html>

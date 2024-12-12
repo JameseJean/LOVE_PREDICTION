@@ -1,0 +1,37 @@
+/* 颜色变量 */
+:root {
+  /* 主题色 */
+  --primary-color: #FF69B4;    /* 粉色系 - 主色调 */
+  --secondary-color: #FFFFFF;  /* 白色 - 辅助色 */
+  --accent-color: #4B0082;    /* 深紫色 - 强调色 */
+  
+  /* 功能色 */
+  --error-color: #FF0000;     /* 错误提示红色 */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* 阴影颜色 */
+  
+  /* 文字颜色 */
+  --text-primary: #333333;    /* 主要文字颜色 */
+  --text-secondary: #666666;  /* 次要文字颜色 */
+  
+  /* 字体大小 */
+  --font-size-title-mobile: 1.5rem;
+  --font-size-title-tablet: 2rem;
+  --font-size-title-desktop: 2.5rem;
+  
+  --font-size-text-mobile: 1rem;
+  --font-size-text-tablet: 1.1rem;
+  --font-size-text-desktop: 1.2rem;
+  
+  --font-size-button-mobile: 1rem;
+  --font-size-button-tablet: 1.1rem;
+  --font-size-button-desktop: 1.2rem;
+  
+  /* 间距 */
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+  
+  /* 断点 */
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
+} 

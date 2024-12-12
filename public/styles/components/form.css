@@ -1,0 +1,86 @@
+/* 表单容器 */
+.form-section {
+  background-color: var(--secondary-color);
+  padding: var(--spacing-large);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+/* 表单样式 */
+#prediction-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+/* 标签样式 */
+label {
+  color: var(--text-primary);
+  font-size: var(--font-size-text-mobile);
+  font-weight: 500;
+  margin-bottom: var(--spacing-small);
+}
+
+/* 输入框样式 */
+input {
+  width: 100%;
+  padding: var(--spacing-medium);
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* 输入框焦点状态 */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 8px var(--shadow-color);
+  border-color: var(--accent-color);
+}
+
+/* 错误提示样式 */
+.error-message {
+  color: var(--error-color);
+  font-size: 0.9em;
+  min-height: 20px;
+  margin-top: 4px;
+}
+
+/* 提交按钮样式 */
+button[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: var(--spacing-medium) var(--spacing-large);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--font-size-button-mobile);
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: var(--spacing-medium);
+}
+
+/* 按钮悬停效果 */
+button[type="submit"]:hover {
+  background-color: var(--accent-color);
+}
+
+/* 响应式适配 */
+@media (min-width: 768px) {
+  label {
+    font-size: var(--font-size-text-tablet);
+  }
+  
+  button[type="submit"] {
+    font-size: var(--font-size-button-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  label {
+    font-size: var(--font-size-text-desktop);
+  }
+  
+  button[type="submit"] {
+    font-size: var(--font-size-button-desktop);
+  }
+} 
