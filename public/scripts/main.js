@@ -64,15 +64,13 @@ function getResultDescription(score) {
 }
 
 // API配置
-const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? '/api'
-  : '';
+const API_BASE_URL = '/api';
 
 // 提交表单
 async function submitForm(formData) {
-  console.log('开始提交数据到服务器...');
-  
   try {
+    showLoading();
+    
     const response = await fetch(`${API_BASE_URL}/predict`, {
       method: 'POST',
       headers: {
@@ -86,13 +84,15 @@ async function submitForm(formData) {
     }
     
     const result = await response.json();
-    console.log('服务器响应:', result);
     showResult(result);
     return result;
     
   } catch (error) {
-    console.error('提交请求失败:', error);
+    console.error('提交失败:', error);
+    alert('抱歉，提交失败，请稍后重试！');
     throw error;
+  } finally {
+    hideLoading();
   }
 }
 
