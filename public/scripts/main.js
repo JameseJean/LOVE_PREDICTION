@@ -73,7 +73,7 @@ async function submitForm(formData) {
   console.log('开始提交数据到服务器...');
   
   try {
-    const response = await fetch(`${API_BASE_URL}/api/predict`, {
+    const response = await fetch(`${API_BASE_URL}/predict`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

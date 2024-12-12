@@ -47,7 +47,7 @@ function calculateCompatibility(name1, age1, name2, age2) {
 }
 
 // 预测接口
-app.post('/predict', (req, res) => {
+app.post('/api/predict', (req, res) => {
   const { name1, age1, name2, age2 } = req.body;
   
   // 参数验证
