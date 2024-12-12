@@ -63,12 +63,17 @@ function getResultDescription(score) {
   }
 }
 
+// API配置
+const API_BASE_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://love-prediction-nxo93si9y-jamesjeans-projects.vercel.app'
+  : '';
+
 // 提交表单
 async function submitForm(formData) {
   console.log('开始提交数据到服务器...');
   
   try {
-    const response = await fetch('/predict', {
+    const response = await fetch(`${API_BASE_URL}/api/predict`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
