@@ -1,16 +1,12 @@
 {
   "version": 2,
-  "routes": [
-    { "src": "/api/predict", "dest": "/api/predict.js" }
+  "rewrites": [
+    { "source": "/api/predict", "destination": "/api/predict.js" }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';"
-        },
         {
           "key": "Cache-Control",
           "value": "public, max-age=0, must-revalidate"

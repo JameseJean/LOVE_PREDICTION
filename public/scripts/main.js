@@ -1,6 +1,3 @@
-// 在文件最开始定义 API 配置
-const API_BASE_URL = '/api';
-
 // 全局状态管理
 const state = {
   isLoading: false,
@@ -70,7 +67,7 @@ function getResultDescription(score) {
 async function submitForm(data) {
   try {
     showLoading();
-    const response = await fetch(`${API_BASE_URL}/predict`, {
+    const response = await fetch('/api/predict', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
